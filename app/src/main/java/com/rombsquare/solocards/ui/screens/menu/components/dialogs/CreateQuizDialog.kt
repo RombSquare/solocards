@@ -1,4 +1,4 @@
-package com.rombsquare.solocards.ui.screens.menu.components
+package com.rombsquare.solocards.ui.screens.menu.components.dialogs
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.AlertDialog
@@ -12,7 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 
 @Composable
-fun RenameQuizDialog(
+fun CreateQuizDialog(
     onDismiss: () -> Unit,
     onConfirm: (String) -> Unit,
 ) {
@@ -20,7 +20,7 @@ fun RenameQuizDialog(
 
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = {Text("Give new name for quiz")},
+        title = {Text("Name your quiz")},
         text = {
             Column {
                 OutlinedTextField(
@@ -33,7 +33,7 @@ fun RenameQuizDialog(
         confirmButton = {
             TextButton(onClick = {
                 onConfirm(name)
-            }) { Text("Update") }
+            }) { Text("Yes") }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) { Text("Cancel") }

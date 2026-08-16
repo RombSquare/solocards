@@ -11,11 +11,11 @@ import com.rombsquare.solocards.domain.models.Card
 import com.rombsquare.solocards.domain.usecases.cards.CardUseCases
 import com.rombsquare.solocards.domain.usecases.scripting.ScriptUseCases
 import com.rombsquare.solocards.domain.models.CardSide
-import com.rombsquare.solocards.domain.models.CardValidationResult
 import com.rombsquare.solocards.domain.models.GameMode
 import com.rombsquare.solocards.domain.models.GameResult
 import com.rombsquare.solocards.domain.models.Quiz
-import com.rombsquare.solocards.domain.usecases.card_validation.CardValidationUseCases
+import com.rombsquare.solocards.domain.models.ValidationResult
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.CardValidationUseCases
 import com.rombsquare.solocards.domain.usecases.history.HistoryUseCases
 import com.rombsquare.solocards.domain.usecases.quizzes.QuizUseCases
 import com.rombsquare.solocards.ui.screens.editor.models.Dialog
@@ -153,13 +153,13 @@ class EditorViewModel(
     }
 
     private fun onSuccessCardValidation(
-        cardValidationResult: CardValidationResult,
+        result: ValidationResult,
         block: () -> Unit
     ) {
-        if (cardValidationResult is CardValidationResult.Success) {
+        if (result is ValidationResult.Success) {
             block()
         } else {
-            showMessage((cardValidationResult as CardValidationResult.Failure).reason.toString())
+            showMessage((result as ValidationResult.Failure).reason.toString())
         }
     }
 

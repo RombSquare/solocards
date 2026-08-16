@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rombsquare.solocards.domain.models.Quiz
 import com.rombsquare.solocards.ui.theme.SolocardsTheme
-import com.rombsquare.solocards.ui.utils.LabeledCheckbox
+import com.rombsquare.solocards.ui.utils.components.LabeledCheckbox
 
 data class QuizSettingsValues(
     var showAnswer: Boolean,

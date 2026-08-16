@@ -1,4 +1,4 @@
-package com.rombsquare.solocards.domain.usecases.card_validation
+package com.rombsquare.solocards.domain.usecases.validation.card_validation
 
 data class CardValidationUseCases(
     val basicCardValidation: BasicCardValidation,

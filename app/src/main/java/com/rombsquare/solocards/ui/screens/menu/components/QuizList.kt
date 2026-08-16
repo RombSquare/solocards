@@ -3,31 +3,23 @@ package com.rombsquare.solocards.ui.screens.menu.components
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.material3.Surface
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rombsquare.solocards.domain.models.Quiz
 import com.rombsquare.solocards.ui.theme.SolocardsTheme
-import androidx.compose.foundation.lazy.items
 
 @Composable
 fun QuizList(
@@ -53,59 +45,32 @@ fun QuizList(
         return
     }
 
-    LazyColumn(
+    LazyVerticalGrid(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        columns = GridCells.Fixed(2),
+        contentPadding = PaddingValues(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        items(
-            items = quizzes.chunked(2),
-            key = { chunk -> chunk.first().id }
-        ) { chunk ->
-            val quiz1 = chunk[0]
-            val quiz2 = chunk.getOrNull(1)
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                QuizItem(
-                    modifier = Modifier
-                        .weight(1f),
-                        //.padding(horizontal = 60.dp, vertical = 4.dp),
-                    quiz = quiz1,
-                    onClick = { onQuizClick(quiz1) },
-                    onLongClick = {
-                        Log.d("SolocardsTest", "Quiz long tapped: ${quiz1}")
-                        onLongQuizClick(quiz1)
-                    },
-                    selectionMode = (selectedQuiz != null),
-                    onFavClicked = { onFavClicked(quiz1) },
-                    onArchived = { onArchived(quiz1) },
-                    isSelected = (selectedQuiz == quiz1),
-                    swipeToDismissBoxValue = SwipeToDismissBoxValue.EndToStart
-                )
-
-                if (quiz2 != null) {
-                    QuizItem(
-                        modifier = Modifier
-                            .weight(1f),
-                            //.padding(horizontal = 60.dp, vertical = 4.dp),
-                        quiz = quiz2,
-                        onClick = { onQuizClick(quiz2) },
-                        onLongClick = {
-                            Log.d("SolocardsTest", "Quiz long tapped: ${quiz2}")
-                            onLongQuizClick(quiz2)
-                        },
-                        selectionMode = (selectedQuiz != null),
-                        onFavClicked = { onFavClicked(quiz2) },
-                        onArchived = { onArchived(quiz2) },
-                        isSelected = (selectedQuiz == quiz2),
-                        swipeToDismissBoxValue = SwipeToDismissBoxValue.StartToEnd
-                    )
-                } else {
-                    Spacer(Modifier.weight(1f))
-                }
-
-            }
-
+        itemsIndexed(
+            items = quizzes,
+            key = { i, quiz -> quiz.id }
+        ) { i, quiz ->
+            QuizItem(
+                modifier = Modifier.animateItem(),
+                quiz = quiz,
+                onClick = { onQuizClick(quiz) },
+                onLongClick = {
+                    Log.d("SolocardsTest", "Quiz long tapped: $quiz")
+                    onLongQuizClick(quiz)
+                },
+                selectionMode = (selectedQuiz != null),
+                onFavClicked = { onFavClicked(quiz) },
+                onArchived = { onArchived(quiz) },
+                isSelected = (selectedQuiz == quiz),
+                swipeToDismissBoxValue =
+                    if (i % 2 == 0) SwipeToDismissBoxValue.EndToStart else SwipeToDismissBoxValue.StartToEnd
+            )
         }
     }
 }

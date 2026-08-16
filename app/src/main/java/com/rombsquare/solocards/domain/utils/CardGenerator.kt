@@ -1,4 +1,4 @@
-package com.rombsquare.solocards.domain
+package com.rombsquare.solocards.domain.utils
 
 import com.rombsquare.solocards.domain.models.Card
 import com.rombsquare.solocards.domain.models.GeneratedCard
@@ -57,14 +57,30 @@ class CardGenerator(
                 val newAnswer = setVars(card.answer, vars)
                 val newOptions = card.options.map { setVars(it, vars) }
 
-                return Result.success(GeneratedCard(newQuestion, newAnswer, newOptions, card.optionCount, card.allowedModes))
+                return Result.success(
+                    GeneratedCard(
+                        newQuestion,
+                        newAnswer,
+                        newOptions,
+                        card.optionCount,
+                        card.allowedModes
+                    )
+                )
             }.onFailure { e ->
                 return Result.failure(e)
             }
         } else {
 
             // If the code is disabled
-            return Result.success(GeneratedCard(card.question, card.answer, card.options, card.optionCount, card.allowedModes))
+            return Result.success(
+                GeneratedCard(
+                    card.question,
+                    card.answer,
+                    card.options,
+                    card.optionCount,
+                    card.allowedModes
+                )
+            )
         }
 
         throw Exception("Something went wrong during a running code of a card")

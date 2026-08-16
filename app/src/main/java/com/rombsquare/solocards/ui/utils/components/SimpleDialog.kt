@@ -1,4 +1,4 @@
-package com.rombsquare.solocards.ui.utils
+package com.rombsquare.solocards.ui.utils.components
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text

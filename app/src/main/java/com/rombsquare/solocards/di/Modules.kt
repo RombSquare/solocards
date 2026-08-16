@@ -1,19 +1,21 @@
 package com.rombsquare.solocards.di
 
 import androidx.room.Room
+import com.rombsquare.solocards.data.json.SerializerRepoImpl
 import com.rombsquare.solocards.data.lua.ScriptRepoImpl
 import com.rombsquare.solocards.data.room.AppDatabase
 import com.rombsquare.solocards.data.room.DataRepoImpl
-import com.rombsquare.solocards.domain.CardGenerator
+import com.rombsquare.solocards.domain.utils.CardGenerator
 import com.rombsquare.solocards.domain.repos.DataRepo
 import com.rombsquare.solocards.domain.repos.ScriptRepo
-import com.rombsquare.solocards.domain.usecases.card_validation.BasicCardValidation
-import com.rombsquare.solocards.domain.usecases.card_validation.BooleanModeValidation
-import com.rombsquare.solocards.domain.usecases.card_validation.CardTextValidation
-import com.rombsquare.solocards.domain.usecases.card_validation.CardValidationUseCases
-import com.rombsquare.solocards.domain.usecases.card_validation.EditCardValidation
-import com.rombsquare.solocards.domain.usecases.card_validation.MixedModeValidation
-import com.rombsquare.solocards.domain.usecases.card_validation.OptionModeValidation
+import com.rombsquare.solocards.domain.repos.SerializerRepo
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.BasicCardValidation
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.BooleanModeValidation
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.CardTextValidation
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.CardValidationUseCases
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.EditCardValidation
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.MixedModeValidation
+import com.rombsquare.solocards.domain.usecases.validation.card_validation.OptionModeValidation
 import com.rombsquare.solocards.domain.usecases.cards.CardUseCases
 import com.rombsquare.solocards.domain.usecases.cards.CreateEmptyCard
 import com.rombsquare.solocards.domain.usecases.cards.DeleteCard
@@ -28,6 +30,9 @@ import com.rombsquare.solocards.domain.usecases.history.DeleteGameResult
 import com.rombsquare.solocards.domain.usecases.history.GetResultsByQuiz
 import com.rombsquare.solocards.domain.usecases.history.HistoryUseCases
 import com.rombsquare.solocards.domain.usecases.history.InsertGameResult
+import com.rombsquare.solocards.domain.usecases.serializer.DeserializeQuiz
+import com.rombsquare.solocards.domain.usecases.serializer.SerializerUseCases
+import com.rombsquare.solocards.domain.usecases.serializer.SerializeQuiz
 import com.rombsquare.solocards.domain.usecases.quizzes.AddTagToQuiz
 import com.rombsquare.solocards.domain.usecases.quizzes.ArchiveQuiz
 import com.rombsquare.solocards.domain.usecases.quizzes.ChangeQuizFav
@@ -50,6 +55,12 @@ import com.rombsquare.solocards.domain.usecases.quizzes.UpdateTagsOfQuiz
 import com.rombsquare.solocards.domain.usecases.scripting.GenerateCard
 import com.rombsquare.solocards.domain.usecases.scripting.GenerateQuiz
 import com.rombsquare.solocards.domain.usecases.scripting.ScriptUseCases
+import com.rombsquare.solocards.domain.usecases.serializer.DeserializeProgress
+import com.rombsquare.solocards.domain.usecases.serializer.SerializeProgress
+import com.rombsquare.solocards.domain.usecases.validation.quiz_validation.QuizValidation
+import com.rombsquare.solocards.domain.usecases.validation.quiz_validation.QuizValidationUseCases
+import com.rombsquare.solocards.domain.usecases.validation.tag_validation.TagValidation
+import com.rombsquare.solocards.domain.usecases.validation.tag_validation.TagValidationUseCases
 import com.rombsquare.solocards.ui.screens.editor.EditorViewModel
 import com.rombsquare.solocards.ui.screens.game.GameViewModel
 import com.rombsquare.solocards.ui.screens.menu.MenuViewModel
@@ -80,10 +91,11 @@ val appModule = module {
 
     single<DataRepo> { DataRepoImpl(get(), get(), get()) }
     single<ScriptRepo> { ScriptRepoImpl() }
+    single<SerializerRepo> { SerializerRepoImpl() }
 
     // ViewModels
 
-    viewModel { MenuViewModel(get()) }
+    viewModel { MenuViewModel(get(), get(), get(), get()) }
     viewModel { EditorViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel { GameViewModel(get(), get(), get(), get(), get()) }
 
@@ -149,6 +161,27 @@ val appModule = module {
             mixedModeValidation = MixedModeValidation(),
             optionModeValidation = OptionModeValidation(),
             cardTextValidation = CardTextValidation()
+        )
+    }
+
+    factory {
+        TagValidationUseCases(
+            tagValidation = TagValidation()
+        )
+    }
+
+    factory {
+        QuizValidationUseCases(
+            quizValidation = QuizValidation()
+        )
+    }
+
+    factory {
+        SerializerUseCases(
+            serializeQuiz = SerializeQuiz(get(), get()),
+            deserializeQuiz = DeserializeQuiz(get(), get()),
+            serializeProgress = SerializeProgress(get(), get()),
+            deserializeProgress = DeserializeProgress(get(), get())
         )
     }
 }

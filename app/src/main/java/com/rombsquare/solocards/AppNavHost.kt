@@ -48,6 +48,7 @@ fun AppNavHost(
                     navController.navigate(Editor(quizId))
                 },
                 onEvent = viewModel::onEvent,
+                uiEffect = viewModel.effect,
                 uiState=uiState
             )
         }

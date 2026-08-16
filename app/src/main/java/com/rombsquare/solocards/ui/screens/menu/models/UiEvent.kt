@@ -1,19 +1,25 @@
 package com.rombsquare.solocards.ui.screens.menu.models
 
 import com.rombsquare.solocards.domain.models.Quiz
+import com.rombsquare.solocards.domain.models.QuizSortMethod
 import com.rombsquare.solocards.domain.models.Section
+import com.rombsquare.solocards.domain.models.SortDirection
 
 sealed interface UiEvent {
+
+    // Basic quiz operations
     data class CreateQuiz(val name: String): UiEvent
     data class SelectQuiz(val quiz: Quiz): UiEvent
     data class RenameQuiz(val name: String): UiEvent
     data class QuizClickedInTrash(val quiz: Quiz): UiEvent
     data object RestoreQuiz: UiEvent
 
+    // Tags
     data object TagIconClicked: UiEvent
     data class AddTag(val newTag: String): UiEvent
     data class RemoveTag(val tagToRemove: String): UiEvent
 
+    // Deletion
     data object OnDeleteClicked: UiEvent
     data object ClearTrash: UiEvent
     data object DeleteForever: UiEvent
@@ -32,8 +38,28 @@ sealed interface UiEvent {
 
     // Sort
     data object OnSortIconClicked: UiEvent
-    data class OnSortOptionChosen(val sortingMethod: QuizSortingMethod): UiEvent
+    data class OnSortMethodChosen(val sortingMethod: QuizSortMethod): UiEvent
+    data class OnSortDirectionChosen(val sortDirection: SortDirection): UiEvent
+    data object OnMoveFavoritesToTopToggle: UiEvent
     data object HideSortingSheet: UiEvent
 
     data class OnArchived(val quiz: Quiz): UiEvent
+
+    // Toast
+    data object OnToastShown: UiEvent
+
+    // Local Import/Export feature
+    data object ExportQuizLocally: UiEvent
+    data object ImportQuizLocally: UiEvent
+    data object ExportProgressLocally: UiEvent
+    data object ImportProgressLocally: UiEvent
+    data class ObtainImportedData(val jsonString: String): UiEvent
+    data object ShareQuiz: UiEvent
+
+    // Settings & Reset progress
+    data object SettingsClicked: UiEvent
+    data object ResetClicked: UiEvent // Show Warning dialog first
+    data object ImportClicked: UiEvent
+    data object ResetProgress: UiEvent
+
 }

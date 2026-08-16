@@ -7,8 +7,10 @@ class ChangeQuizFav(
     val dataRepo: DataRepo
 ) {
     suspend operator fun invoke(quiz: Quiz) {
-        dataRepo.updateQuiz(quiz.copy(
-            isFav = !quiz.isFav
-        ))
+        dataRepo.updateQuiz(
+            quiz.copy(
+                isFav = !quiz.isFav
+            )
+        )
     }
 }

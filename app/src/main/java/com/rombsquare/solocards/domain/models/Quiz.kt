@@ -1,8 +1,10 @@
 package com.rombsquare.solocards.domain.models
 
+import kotlinx.serialization.Serializable
 import kotlin.time.Clock
 import kotlin.time.Instant
 
+@Serializable
 data class Quiz(
     val id: Long = 0,
 

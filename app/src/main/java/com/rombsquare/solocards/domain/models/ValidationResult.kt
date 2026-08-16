@@ -1,14 +1,30 @@
 package com.rombsquare.solocards.domain.models
 
-sealed interface CardValidationResult {
-    data object Success: CardValidationResult
-    data class Failure(val reason: CardValidationError): CardValidationResult
+sealed interface ValidationResult {
+    data object Success: ValidationResult
+    data class Failure(val reason: ValidationError): ValidationResult
 }
 
-sealed interface CardValidationError {
-    data object EmptyQuestionAnswer: CardValidationError
-    data object EmptyOptions: CardValidationError
-    data object NotEnoughOptions: CardValidationError
-    data object NoAllowedModes: CardValidationError
-    data object TooBigQuestionAnswer: CardValidationError
+interface ValidationError
+
+enum class CardValidationError: ValidationError {
+    EmptyQuestionAnswer,
+    EmptyOptions,
+    NotEnoughOptions,
+    NoAllowedModes,
+    TooBigQuestionAnswer,
+}
+
+enum class TagValidationError: ValidationError {
+    TagIsTooLong,
+    EmptyTag,
+    TagExists,
+    TooManyTags,
+    WrongTagName
+}
+
+enum class QuizValidationError: ValidationError {
+    NameIsEmpty,
+    NameIsTooLong,
+    NameExists
 }

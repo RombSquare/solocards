@@ -52,25 +52,16 @@ fun QuizItem(
         SwipeToDismissBoxValue.Settled,
         positionalThreshold = SwipeToDismissBoxDefaults.positionalThreshold,
         confirmValueChange = { dismissValue ->
-            if (dismissValue == swipeToDismissBoxValue && !swipeIsTriggered) {
-                swipeIsTriggered = true
-                onArchived()
-                false
-            } else if (dismissValue == SwipeToDismissBoxValue.Settled) {
-                swipeIsTriggered = false
-                false
-            } else {
-                false
+            if (dismissValue == SwipeToDismissBoxValue.StartToEnd ||
+                dismissValue == SwipeToDismissBoxValue.EndToStart) {
+                if (!swipeIsTriggered) {
+                    swipeIsTriggered = true
+                    onArchived()
+                }
             }
+            false
         },
     )
-
-    LaunchedEffect(dismissState.currentValue) {
-        if (dismissState.currentValue == swipeToDismissBoxValue) {
-            dismissState.reset()
-            swipeIsTriggered = false
-        }
-    }
 
     SwipeToDismissBox(
         modifier = modifier,
@@ -89,7 +80,9 @@ fun QuizItem(
             colors = CardDefaults.cardColors(
                 containerColor = (
                         if (!quiz.isArchived) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.tertiaryContainer
-                ).copy(alpha = 0.4f)
+                ).copy(
+                        alpha = if (!quiz.isFav) 0.4f else 0.7f
+                )
             ),
             border = if(isSelected)
                 BorderStroke(
