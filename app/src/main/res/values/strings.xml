@@ -1,3 +1,343 @@
 <resources>
-    <string name="app_name">Solocards</string>
+    <string name="app_name" translatable="false">Solocards</string>
+    <string name="web_client_id" translatable="false">499163301245-r1valr15hqkkap1ae87c6jur8bur973g.apps.googleusercontent.com</string>
+
+    <!-- Common -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="warning">Warning</string>
+    <string name="okay">Okay</string>
+    <string name="prev">Previous</string>
+    <string name="next">Next</string>
+    <string name="exit">Exit</string>
+    <string name="continue_">Continue</string>
+
+    <!-- Cloud storage -->
+    <string name="cloud_storage">Cloud storage</string>
+    <string name="cloud_descr">You can store your quizzes in the cloud, so you can easier share quizzes between your devices. Sign in to use cloud feature</string>
+    <string name="google_sign_in">Sign in with Google</string>
+    <string name="logged_in_as">Logged in as</string>
+    <string name="cloud_import_button">Import quizzes from cloud</string>
+    <string name="cloud_import_warning">Pay attention, all your current data will be removed. Click \'Yes\' to proceed</string>
+    <string name="cloud_export_button">Export quizzes to cloud</string>
+    <string name="cloud_export_warning">Overwrite the quiz data in the cloud?</string>
+    <string name="uploaded_at">Uploaded at</string>
+    <string name="quizzes_in_cloud">Quizzes in cloud</string>
+    <string name="sign_out">Sign out</string>
+
+    <!-- Cloud storage toasts -->
+    <string name="toast_signed_in">Signed in successfully!</string>
+    <string name="toast_signed_out">Signed out</string>
+    <string name="toast_imported_successfully">Imported successfully!</string>
+    <string name="toast_exported_successfully">Exported successfully!</string>
+    <string name="toast_cannot_sign_in">Cannot sign in. Try again later…</string>
+    <string name="toast_cannot_sign_out">Cannot sign out. Try again later…</string>
+    <string name="toast_cannot_import">Cannot import data. Try again later…</string>
+    <string name="toast_cannot_export">Cannot export data. Try again later…</string>
+    <string name="toast_wait_few_seconds">Wait few seconds and try again</string>
+
+    <!-- Menu -->
+    <string name="quizzes">Quizzes</string>
+    <string name="favs">Favorites</string>
+    <string name="trash">Trash</string>
+    <string name="archive">Archive</string>
+    <string name="help">Help</string>
+    <string name="export">Export</string>
+    <string name="name_your_quiz">Name your quiz</string>
+    <string name="name">Name</string>
+    <string name="rename_quiz_title">Give new name for quiz</string>
+    <string name="restore_quiz_title">Restore quiz</string>
+    <string name="restore_quiz_descr">Do you want to restore quiz?</string>
+    <string name="create">Create</string>
+    <string name="update">Update</string>
+    <string name="rename">Rename</string>
+    <string name="permanent_quiz_deletion_warning">Are you sure you want to delete this quiz permanently?</string>
+    <string name="clear_trash_warning">Are you sure you want to delete trashed quizzes permanently?</string>
+    <string name="import_quiz_button">Import quiz</string>
+    <string name="open_dropdown_menu">Open dropdown menu</string>
+    <string name="archive_action">Archive</string>
+    <string name="unarchive_action">Unarchive</string>
+    <string name="quiz_selected">Quiz selected</string>
+    <string name="search">Search</string>
+    <string name="search_ellipsis">Search…</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="share">Share</string>
+    <string name="share_error">Cannot share it</string>
+    <string name="clear_trash">Clear trash</string>
+    <string name="create_quiz">Create quiz</string>
+    <string name="no_quizzes">No quizzes here</string>
+
+    <!-- Menu Snackbars & Toasts -->
+    <string name="undo">Undo</string>
+    <string name="moved_to_trash">Moved to trash</string>
+    <string name="trash_is_cleared">Trash is cleared</string>
+    <string name="quiz_was_deleted">Quiz was deleted</string>
+    <string name="quiz_was_restored">Quiz was restored</string>
+    <string name="quiz_was_archived">Quiz was archived</string>
+    <string name="quiz_was_unarchived">Quiz was unarchived</string>
+    <string name="loaded_successfully">Loaded successfully!</string>
+    <string name="cannot_open">Cannot open it</string>
+    <string name="name_is_empty">Name is empty</string>
+    <string name="name_is_too_long">Name is too long</string>
+    <string name="name_exists">Quiz with this name already exists</string>
+    <string name="tag_is_empty">Empty tag</string>
+    <string name="tag_is_too_long">Tag is too long</string>
+    <string name="tag_exists">This tag exists</string>
+    <string name="wrong_tag_name">Wrong tag name</string>
+    <string name="too_many_tags">Too many tags</string>
+    <string name="exported_successfully">Exported successfully!</string>
+
+    <!-- Tags -->
+    <string name="tags">Tags</string>
+    <string name="descr_when_no_tags">Long-press the quiz and tap on hashtag button to set tags for the quiz</string>
+    <string name="remove_tag">Remove tag</string>
+    <string name="enter_tag_name">Enter tag name</string>
+    <string name="add_tag">Add tag</string>
+    <string name="edit_tags">Edit tags</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sort by</string>
+    <string name="sort">Sort</string>
+    <string name="date_created">Date created</string>
+    <string name="date_modified">Date modified</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="move_favs_to_top">Move favorites to top</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="import_data_button">Import progress</string>
+    <string name="export_data_button">Export progress</string>
+    <string name="reset_data_button">Reset progress</string>
+    <string name="reset_data_warning">Are you sure you want to reset progress? This process is irreversible</string>
+    <string name="import_data_warning">By clicking yes, all current progress will be lost</string>
+
+    <!-- Editor -->
+    <string name="card_editor">Card editor</string>
+    <string name="no_games_yet">No games yet…</string>
+    <string name="delete_session">Delete session</string>
+    <string name="choose_mode">Choose mode</string>
+    <string name="card_props">Card properties</string>
+    <string name="card_props_descr">All possible options of this card</string>
+    <string name="option_blank">Option blank</string>
+    <string name="option_blank_placeholder">Option1, Option2, Option3, …</string>
+    <string name="number_of_options">The number of options:</string>
+    <string name="settings_for_mixed_mode">Mixed mode settings</string>
+    <string name="mixed_mode_settings_descr">Here you can set the specific modes that will appear in Mixed mode</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+    <string name="click_to_edit_question">Click to edit question…</string>
+    <string name="click_to_edit_answer">Click to edit answer…</string>
+    <string name="card_deletion_warning">Do you want to delete this card?</string>
+    <string name="back_to_menu">Back to menu</string>
+    <string name="game_history">Game history</string>
+    <string name="play">Play</string>
+    <string name="flip_card">Flip card</string>
+    <string name="props">Properties</string>
+    <string name="create_card">Create card</string>
+    <string name="delete_card">Delete card</string>
+    <string name="prev_card">Previous card</string>
+    <string name="next_card">Next card</string>
+    <string name="delete_all">Delete all</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="delete_option">Delete option</string>
+    <string name="option_field_placeholder">Enter new option here…</string>
+    <string name="option_count">Option count</string>
+    <string name="option_blank_help">The list of all incorrect options for this card</string>
+    <string name="option_count_help">The number of options displayed in Option Mode</string>
+    <string name="mixed_mode_settings_help">Only selected modes will appear in Mixed Mode (for this card)</string>
+    <string name="occurrences">Occurrences</string>
+    <string name="occurrences_descr">How many times this card will appear in the test</string>
+
+    <!-- Editor Snackbars -->
+    <string name="cannot_delete_single_card">Cannot delete a single card</string>
+    <string name="card_created">Card is created</string>
+    <string name="card_is_deleted">Card was deleted</string>
+    <string name="error">Error</string>
+    <string name="history_cleared">History was cleared</string>
+    <string name="empty_question_answer">Question or answer is empty</string>
+    <string name="empty_options">Some card doesn\'t have options</string>
+    <string name="not_enough_options">Some card doesn\'t have enough options</string>
+    <string name="no_allowed_modes">Some card has no allowed modes</string>
+    <string name="too_big_question_answer">The card has too big question/answer</string>
+
+    <!-- Quiz settings -->
+    <string name="quiz_settings">Quiz settings</string>
+    <string name="show_answer_when_incorrect">Show answer when incorrect</string>
+    <string name="shuffle_cards">Shuffle cards</string>
+    <string name="swap_questions_and_answers">Swap questions and answers</string>
+    <string name="rate_result">Rate your result at quiz end</string>
+    <string name="show_treat_as_correct">Show "Treat it as correct" or "Treat it as half-correct"</string>
+    <string name="card_limit">Limit the number of cards</string>
+    <string name="count">Count</string>
+
+    <!-- Modes -->
+    <string name="flip_mode">Flip mode</string>
+    <string name="writing_mode">Writing mode</string>
+    <string name="boolean_mode">Boolean mode</string>
+    <string name="option_mode">Option mode</string>
+    <string name="mixed_mode">Mixed mode</string>
+    <string name="flip_mode_compact">Flip\nmode</string>
+    <string name="writing_mode_compact">Writing\nmode</string>
+    <string name="boolean_mode_compact">Boolean\nmode</string>
+    <string name="option_mode_compact">Option\nmode</string>
+    <string-array name="mode_list">
+        <item>Flip mode</item>
+        <item>Writing mode</item>
+        <item>Boolean mode</item>
+        <item>Option mode</item>
+        <item>Mixed mode</item>
+    </string-array>
+
+    <!-- Scripting -->
+    <string name="card_script">Card script</string>
+    <string name="card_script_descr">You can generate random cards using Lua language (optional)</string>
+    <string name="code">Code</string>
+    <string name="occurrences_count">The number of occurrences for this card:</string>
+    <string name="run">Run</string>
+    <string name="edit_code">Edit code</string>
+
+    <!-- Game -->
+    <string name="test_is_finished">Test is finished!</string>
+    <string name="your_result">Your result</string>
+    <string name="correct">Correct</string>
+    <string name="half_correct">Maybe</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="home">Home</string>
+    <string name="game_error_title">Some card made an error…</string>
+    <string name="game_error_descr">One of your cards threw an error during the creation of quiz. Please check the code of this card:</string>
+    <string name="error_reason">The reason of error:</string>
+    <string name="leave_the_game">Leave the game?</string>
+    <string name="exit_warning">Are you sure you want to finish this quiz?</string>
+    <string name="finish">Finish</string>
+    <string name="rate_result_title">Rate your result</string>
+    <string name="rate">Rate</string>
+    <string name="skip">Skip</string>
+    <string name="card_n">Card #</string>
+    <string name="show_answer">Show answer</string>
+    <string name="is_the_answer">Is the answer</string>
+    <string name="did_you_think_of_answer">Did you think about this answer?</string>
+    <string name="treat_as_correct">Treat it as correct</string>
+    <string name="treat_as_half_correct">Treat it as half-correct</string>
+    <string name="flip_mode_text">Think of the card\'s answer</string>
+
+    <!-- Satisfaction -->
+    <string name="perfect">Perfect</string>
+    <string name="good">Good</string>
+    <string name="normal">Normal</string>
+    <string name="not_bad">Not bad</string>
+    <string name="awful">Awful</string>
+    <string name="unknown_satisfaction">Unknown</string>
+    <string-array name="satisfaction_list">
+        <item>Awful</item>
+        <item>Not bad</item>
+        <item>Normal</item>
+        <item>Good</item>
+        <item>Perfect</item>
+        <item>Unrated</item>
+    </string-array>
+
+    <!-- Time -->
+    <string name="minute_second_format">%1$dm %2$ds</string>
+    
+    <!-- Plurals -->
+    <plurals name="cards">
+        <item quantity="one">%d card</item>
+        <item quantity="other">%d cards</item>
+    </plurals>
+
+    <!-- Scripting Tutorial -->
+    <string name="script_tutorial_dialog_title">Scripting tutorial</string>
+    <string name="script_tutorial_page1_welcome">Welcome to scripting feature!</string>
+    <string name="script_tutorial_page1_content">Scripts allow you to generate random cards. It\'s very useful when you need to create many similar cards</string>
+    <string name="script_tutorial_page2_title">Here is an example</string>
+    <string name="script_tutorial_page2_content1">Imagine you want to create a quiz about multiplication table. Normally, you would need to create around 100 cards such as «What is 2×7», «What is 8×9», etc.</string>
+    <string name="script_tutorial_page2_content2">The script feature fixes this problem. You simply need to create a single card that has this question: «What is A×B» where A and B are some random numbers</string>
+    <string name="script_tutorial_page3_title">Change question and answer</string>
+    <string name="script_tutorial_page3_content1">To make a card for multiplication table, you need to change it\'s question and answer to this:</string>
+    <string name="script_tutorial_page3_question">What is {A} × {B}</string>
+    <string name="script_tutorial_page3_content2">Our script will substitute random numbers into the letters: A, B, C, where the C will store the answer. To tell apart these variables from a normal text, we wrap them with curly braces</string>
+    <string name="script_tutorial_page4_title">Coding time</string>
+    <string name="script_tutorial_page4_content1">Now let\'s move into coding. Under the hood, Solocards uses a programming language called Lua.</string>
+    <string name="script_tutorial_page4_content2_part1">We use a function</string>
+    <string name="script_tutorial_page4_content2_part2">to obtain a random number from 1 to 10 inclusive</string>
+    <string name="script_tutorial_page4_content3">Then we multiply these numbers and assign them to C variable (which stores the answer for our card)</string>
+    <string name="script_tutorial_page5_title">Test your card</string>
+    <string name="script_tutorial_page5_content1">Congrats, now this card can be used to train your multiplication table skills!</string>
+    <string name="script_tutorial_page5_content2">Click Test button in the Code Editor to generate random card.</string>
+    <string name="script_tutorial_page5_content3">By the way, also you are able to generate random options for Boolean and Option mode using script! Click Next below to show how to do that</string>
+    <string name="script_tutorial_page6_title">Making options random</string>
+    <string name="script_tutorial_page6_content1">To generate a random option, we just do the similar thing. In the option blank, add option {D}, where D is some random number (don\'t forget for curly braces)</string>
+    <string name="script_tutorial_page6_content2">Then we simply modify the code:</string>
+    <string name="script_tutorial_page6_content3">In our code, the D number is just the answer minus one.</string>
+    <string name="script_tutorial_page7_title">Making more options</string>
+    <string name="script_tutorial_page7_content1">You can add more random options to the card. Add the option {E} and option {F} to option blank and modify the code:</string>
+    <string name="script_tutorial_page7_content2">The variable E is always bigger than answer by 1, and the F is smaller by 2. Now, you have 3 random options!</string>
+    <string name="script_tutorial_page8_title">Advanced stuff</string>
+    <string name="script_tutorial_page8_content1">All basic things I discussed in this tutorial. If you wanna try some advanced stuff, you can use Lua strings, lists, conditions and loops.</string>
+    <string name="script_tutorial_page8_content2">Also, if you generate a string with multiple options separated by comma and put it into option blank, you will have multiple options (isn\'t considered in this tutorial)</string>
+    <string name="script_tutorial_page8_content3">See the Example Quiz in the quiz menu for more examples.</string>
+    <string name="script_tutorial_page8_goodluck">Good luck in scripting!</string>
+
+    <!-- Play Dialog Tutorial -->
+    <string name="flip_mode_descr">Figure out the answer in your head, then check yourself</string>
+    <string name="writing_mode_descr">Write the answer from a keyboard</string>
+    <string name="boolean_mode_descr">Give YES or NO to the question. Requires at least 1 option in option blank</string>
+    <string name="option_mode_descr">Show multiple options. Requires multiple options in option blank</string>
+    <string name="mixed_mode_descr">All modes in one test</string>
+
+    <!-- FAQ -->
+    <string name="faq_screen_title">Frequently asked questions</string>
+    <string-array name="faq_questions">
+        <item>What is Solocards?</item>
+        <item>What is flashcard?</item>
+        <item>How to use flashcards for study?</item>
+        <item>What is a quiz?</item>
+        <item>What every game mode means?</item>
+        <item>What is a scripting feature?</item>
+        <item>What I can do in cloud storage?</item>
+        <item>What\'s profile information the cloud storage take?</item>
+        <item>What if I see «Can\'t open file» when I import quiz/progress?</item>
+        <item>Where the contact information?</item>
+        <item>What is option blank?</item>
+        <item>Why Solocards?</item>
+    </string-array>
+    <string-array name="faq_answers">
+        <item>Solocards is an offline-first lightweight flashcard app</item>
+        <item>Flashcard is simply just a card with a question and answer on different sides</item>
+        <item>Here is the most common way how to use them: Take any card and make it facing the question side. Your goal is to think of the answer in your head. Then flip the card and verify yourself</item>
+        <item>It\'s a list of flashcards (basically the deck)</item>
+        <item>In the editor click play and then help button. You will see the description of every mode</item>
+        <item>You can find tutorial in a code editor</item>
+        <item>Cloud storage is an optional feature that stores your quizzes in the cloud. It makes easier to transfer and synchronize the progress between devices</item>
+        <item>Only email</item>
+        <item>Make sure you pick the quiz file, not a progress file (or vice versa). If it doesn\'t fix anything, contact me via email</item>
+        <item>In the About menu</item>
+        <item>It\'s the list of all incorrect options of the card</item>
+        <item>Solocards is the lightweight card manager which is the best for every kind of science, especially for math and computer science. The scripting feature makes card-making experience smooth</item>
+    </string-array>
+
+    <!-- Onboarding feature -->
+    <string name="onboarding_page1_title">Welcome to Solocards</string>
+    <string name="onboarding_page1_content">A new and modern way to manage flashcards</string>
+    <string name="onboarding_page2_title">Fast Editor</string>
+    <string name="onboarding_page2_content">Build cards in seconds.\nNo complex UI</string>
+    <string name="onboarding_page3_title">Game Modes</string>
+    <string name="onboarding_page3_content">Use cards in 5 customizable quiz modes</string>
+    <string name="onboarding_page4_title">Write Scripts</string>
+    <string name="onboarding_page4_content">Generate random cards using a programming language! No experience needed</string>
+    <string name="onboarding_page5_title">Share Quizzes</string>
+    <string name="onboarding_page5_content">Easily share quizzes with your friends</string>
+    <string name="onboarding_page6_title">Offline First</string>
+    <string name="onboarding_page6_content">Create &amp; learn without any interruptions</string>
+    <string name="got_it_thx">Got it, thanks</string>
+
+    <!-- About -->
+    <string name="about">About App</string>
+    <string name="about_descr">Solocards is an offline-first flashcard app with a scripting feature</string>
+    <string name="about_author" translatable="false">Made by RombSquare\n(Volodymyr Lavrentiev)</string>
+    <string name="about_email" translatable="false">E-mail: cubesquareromb@gmail.com</string>
 </resources>

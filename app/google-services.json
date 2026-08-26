@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "499163301245",
+    "project_id": "solo-cards",
+    "storage_bucket": "solo-cards.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499163301245:android:a9a6385870d7b896d2f814",
+        "android_client_info": {
+          "package_name": "com.rombsquare.solocards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499163301245-2b0l7baod630vn1u97m8fjq81nftu4m4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rombsquare.solocards",
+            "certificate_hash": "9789fa0ba74addd4fb23b70dc074e1c16cfc1fb1"
+          }
+        },
+        {
+          "client_id": "499163301245-r1valr15hqkkap1ae87c6jur8bur973g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIpQR2fIOaX9mxpIsTVBx8T35w0SvLIP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499163301245-r1valr15hqkkap1ae87c6jur8bur973g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

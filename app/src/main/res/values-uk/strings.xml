@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="close">Закрити</string>
+    <string name="cancel">Скасувати</string>
+    <string name="save">Зберегти</string>
+    <string name="warning">Увага!</string>
+    <string name="okay">Окей</string>
+    <string name="cloud_storage">Хмарне сховище</string>
+    <string name="cloud_descr">Ви можете зберігати свої квести у хмарі, що дасть вам можливість поширювати квести між вашими пристроями. Увійдіть щоб скористатися сховищем</string>
+    <string name="google_sign_in">Увійти з Google</string>
+    <string name="logged_in_as">Користувач</string>
+    <string name="cloud_import_button">Імпортувати квести в хмару</string>
+    <string name="cloud_import_warning">Увага, всі ваші поточні квести будуть видалені. Натисність \'Так\' щоб продовжити</string>
+    <string name="cloud_export_button">Експортувати квести в хмару</string>
+    <string name="cloud_export_warning">Перезаписати дані квестів у хмарі?</string>
+    <string name="uploaded_at">Завантажено о</string>
+    <string name="quizzes_in_cloud">Квести в хмарі</string>
+    <string name="sign_out">Вийти</string>
+    <string name="toast_signed_in">Вхід успішний!</string>
+    <string name="toast_signed_out">Вихід з системи</string>
+    <string name="toast_imported_successfully">Успішно завантажено з хмари!</string>
+    <string name="toast_exported_successfully">Успішно завантажено в хмару!</string>
+    <string name="toast_cannot_sign_in">Помилка при вході. Спробуйте пізніше…</string>
+    <string name="toast_cannot_sign_out">Помилка при виході. Спробуйте пізніше…</string>
+    <string name="toast_cannot_import">Помила, спробуйте пізніше…</string>
+    <string name="toast_cannot_export">Помилка, спробуйте пізніше…</string>
+    <string name="toast_wait_few_seconds">Зачекайте декілька секунд та спробуйте ще раз</string>
+    <string name="quizzes">Квести</string>
+    <string name="favs">Улюблені</string>
+    <string name="trash">Смітник</string>
+    <string name="archive">Архів</string>
+    <string name="help">Допомога</string>
+    <string name="export">Експорт</string>
+    <string name="name_your_quiz">Назвіть квест</string>
+    <string name="name">Назва</string>
+    <string name="rename_quiz_title">Назвіть ваш квест</string>
+    <string name="restore_quiz_title">Відновити квест</string>
+    <string name="restore_quiz_descr">Чи хочете відновити квест?</string>
+    <string name="create">Створити</string>
+    <string name="update">Оновити</string>
+    <string name="rename">Перейменувати</string>
+    <string name="permanent_quiz_deletion_warning">Чи дійсно ви хочете видалити квест назавжди?</string>
+    <string name="clear_trash_warning">Чи дійсно ви хочете видалити квести в смітнику назавжди?</string>
+    <string name="import_quiz_button">Імпортувати квест</string>
+    <string name="open_dropdown_menu">Відкрити випадаюче меню</string>
+    <string name="archive_action">Архівувати</string>
+    <string name="unarchive_action">Розархівувати</string>
+    <string name="quiz_selected">Квест вибрано</string>
+    <string name="search">Пошук</string>
+    <string name="search_ellipsis">Пошук…</string>
+    <string name="open_drawer">Відкрити бокове меню</string>
+    <string name="share">Поширити</string>
+    <string name="share_error">Помилка при поширенні</string>
+    <string name="clear_trash">Очистити смітник</string>
+    <string name="create_quiz">Створити квест</string>
+    <string name="undo">Скасувати</string>
+    <string name="moved_to_trash">Переміщено в смітник</string>
+    <string name="trash_is_cleared">Смітник очищено</string>
+    <string name="quiz_was_deleted">Квест видалено</string>
+    <string name="quiz_was_restored">Квест відновлено</string>
+    <string name="quiz_was_archived">Квест переміщено в архів</string>
+    <string name="quiz_was_unarchived">Квест розархівовано</string>
+    <string name="loaded_successfully">Завантажено успішно!</string>
+    <string name="cannot_open">Помилка при відкритті файлу</string>
+    <string name="name_is_empty">Назва порожня</string>
+    <string name="name_is_too_long">Назва занадто довга</string>
+    <string name="name_exists">Квест з цим ім\'ям вже існує</string>
+    <string name="tag_is_empty">Пустий тег</string>
+    <string name="tag_is_too_long">Тег занадто довгий</string>
+    <string name="tag_exists">Цей тег вже існує</string>
+    <string name="wrong_tag_name">Невірна назва для тега</string>
+    <string name="too_many_tags">Занадто багато тегів</string>
+    <string name="tags">Теги</string>
+    <string name="descr_when_no_tags">Затисність квест та настисніть на хештег, щоб встановити теги</string>
+    <string name="remove_tag">Видалити теги</string>
+    <string name="enter_tag_name">Введіть назву тега</string>
+    <string name="add_tag">Додати тег</string>
+    <string name="edit_tags">Редагувати теги</string>
+    <string name="sort_by">Сортувати за</string>
+    <string name="sort">Сортування</string>
+    <string name="date_created">Датою створення</string>
+    <string name="date_modified">Датою зміни</string>
+    <string name="ascending">За зростанням</string>
+    <string name="descending">За спаданням</string>
+    <string name="move_favs_to_top">Перемістити улюблені вверх</string>
+    <string name="settings">Налаштування</string>
+    <string name="import_data_button">Імпортувати прогрес</string>
+    <string name="export_data_button">Експортувати прогрес</string>
+    <string name="reset_data_button">Очистити прогрес</string>
+    <string name="reset_data_warning">Чи дійсно ви хочете очистити прогрес? Цей процес не можна скасувати</string>
+    <string name="import_data_warning">Натискаючи на так, ваші квести будуть втраченими</string>
+    <string name="card_editor">Редактор карт</string>
+    <string name="no_games_yet">Ігрові сесії відсутні</string>
+    <string name="delete_session">Видалити сесію</string>
+    <string name="choose_mode">Виберіть режим</string>
+    <string name="card_props">Властивості карти</string>
+    <string name="card_props_descr">Нижче ви можете вказати всі неправильні опції цієї карти (розділяючи комою). Вони будуть з\'являтися випадково у Булевому режимі та в режимі Опцій</string>
+    <string name="option_blank">Бланк опцій</string>
+    <string name="option_blank_placeholder">Варіант1, Варіант2, Варіант3, …</string>
+    <string name="number_of_options">Кількість варіантів:</string>
+    <string name="settings_for_mixed_mode">Змішаний режим</string>
+    <string name="mixed_mode_settings_descr">Тут ви можете вибрати лише ті режими, які будуть попадатись в Змішаному режимі</string>
+    <string name="question">Питання</string>
+    <string name="answer">Відповідь</string>
+    <string name="click_to_edit_question">Введіть питання…</string>
+    <string name="click_to_edit_answer">Введіть відповідь…</string>
+    <string name="card_deletion_warning">Чи хочете видалити цю карту?</string>
+    <string name="back_to_menu">Назад в меню</string>
+    <string name="game_history">Історія ігор</string>
+    <string name="play">Грати</string>
+    <string name="flip_card">Перевернути</string>
+    <string name="props">Властивості</string>
+    <string name="create_card">Створити карту</string>
+    <string name="delete_card">Видалити карту</string>
+    <string name="prev_card">Попередня карта</string>
+    <string name="next_card">Наступна карта</string>
+    <string name="cannot_delete_single_card">Неможливо видалити єдину карту</string>
+    <string name="card_created">Карту створено</string>
+    <string name="card_is_deleted">Карту видалено</string>
+    <string name="error">Помилка</string>
+    <string name="history_cleared">Історію очищено</string>
+    <string name="empty_question_answer">Питання чи відповідь є порожнім</string>
+    <string name="empty_options">Одна із карт без вказаних опцій</string>
+    <string name="not_enough_options">Одна із карт має недостатню кількість опцій</string>
+    <string name="no_allowed_modes">Одна із карт без дозволених режимів</string>
+    <string name="too_big_question_answer">Занадто довге питання/відповідь</string>
+    <string name="quiz_settings">Налаштування квесту</string>
+    <string name="show_answer_when_incorrect">Показати відповідь якщо неправильно</string>
+    <string name="shuffle_cards">Тасувати карти</string>
+    <string name="swap_questions_and_answers">Поміняти сторони карт місцями</string>
+    <string name="rate_result">Оцінити свій результат в кінці</string>
+    <string name="show_treat_as_correct">Показувати \"Вважати за правильною відповіддю\"</string>
+    <string name="card_limit">Обмежити кількість карт</string>
+    <string name="count">Кількість</string>
+    <string name="flip_mode">Простий режим</string>
+    <string name="writing_mode">Письмовий режим</string>
+    <string name="boolean_mode">Булевий режим</string>
+    <string name="option_mode">Режим опцій</string>
+    <string name="mixed_mode">Змішаний режим</string>
+    <string name="flip_mode_compact">Простий\nРежим</string>
+    <string name="writing_mode_compact">Письмовий\nрежим</string>
+    <string name="boolean_mode_compact">Булевий\nрежим</string>
+    <string name="option_mode_compact">Режим\nопцій</string>
+    <string name="card_script">Скрипт карти</string>
+    <string name="card_script_descr">Ви можете генерувати випадкові карти використовуючи просту мову програмування Lua (за бажанням)</string>
+    <string name="code">Код</string>
+    <string name="occurrences_count">Кількість екземплярів цієї карти</string>
+    <string name="run">Тест</string>
+    <string name="edit_code">Редагувати код</string>
+    <string name="test_is_finished">Тест завершено!</string>
+    <string name="your_result">Ваш результат</string>
+    <string name="correct">Правильно</string>
+    <string name="half_correct">Мабуть</string>
+    <string name="incorrect">Неправильно</string>
+    <string name="home">На головну</string>
+    <string name="game_error_title">Одна із карт видала помилку…</string>
+    <string name="game_error_descr">Одна із ваших карт видала помилку під час генерації квесту. Будь ласка, перевірте код даної карти:</string>
+    <string name="error_reason">Причина помилки:</string>
+    <string name="leave_the_game">Вийти з гри?</string>
+    <string name="exit_warning">Чи дійсно бажаєте завершити цю гру?</string>
+    <string name="finish">Завершити</string>
+    <string name="rate_result_title">Оцініть ваш результат</string>
+    <string name="rate">Оцінити</string>
+    <string name="skip">Ні, дякую</string>
+    <string name="exit">Вийти</string>
+    <string name="card_n">Карта №</string>
+    <string name="show_answer">Показати відповідь</string>
+    <string name="is_the_answer">Чи відповідь така:</string>
+    <string name="did_you_think_of_answer">Чи ви думали про цю відовідь?</string>
+    <string name="treat_as_correct">Вважати за правильну</string>
+    <string name="treat_as_half_correct">Вважати за наполовину правильно</string>
+    <string name="perfect">Ідеальний</string>
+    <string name="good">Хороший</string>
+    <string name="normal">Нормальний</string>
+    <string name="not_bad">Непоганий</string>
+    <string name="awful">Жахливий</string>
+    <string name="unknown_satisfaction">Невідомий</string>
+    <plurals name="cards">
+        <item quantity="one">%d карта</item>
+        <item quantity="few">%d карти</item>
+        <item quantity="many">%d карт</item>
+    </plurals>
+    <string-array name="mode_list">
+        <item>Простий режим</item>
+        <item>Письмовий режим</item>
+        <item>Булевий режим</item>
+        <item>Режим опцій</item>
+        <item>Змішаний режим</item>
+    </string-array>
+    <string-array name="satisfaction_list">
+        <item>Жахливо</item>
+        <item>Непогано</item>
+        <item>Нормально</item>
+        <item>Добре</item>
+        <item>Ідеально</item>
+        <item>Без оцінки</item>
+    </string-array>
+    <string name="minute_second_format">%1$dхв %2$dсек</string>
+    <string name="delete_all">Видалити все</string>
+    <string name="are_you_sure">Ви впевнені?</string>
+    <string name="delete_option">Видалити опцію</string>
+    <string name="option_field_placeholder">Введіть нову опцію тут…</string>
+    <string name="option_count">Кількість опцій</string>
+    <string name="option_blank_help">Список всіх неправильних опцій цієї карти</string>
+    <string name="option_count_help">Кількість опцій цієї карти які відображатимуться в режимі опцій</string>
+    <string name="mixed_mode_settings_help">Лише вибрані режими будуть з\'являтися в змішаному режимі</string>
+    <string name="flip_mode_text">Яка відповідь до цієї карти? (усно)</string>
+    <string name="script_tutorial_page1_welcome">Ласкаво просимо в скриптинг!</string>
+    <string name="script_tutorial_page1_content">Скриптинг - це особливість в Solocards, що дозволяє генерувати випадкові карти. Дуже корисно коли потрібно створити багато схожих карт</string>
+    <string name="script_tutorial_page2_title">Приклад застосування</string>
+    <string name="script_tutorial_page2_content1">"Уяви що ви хочете створити квест на перевірку знань таблиці множення. Вручну вам б довелося створити десь 100 карт на кшталт «Скільки буде 2×7», «Скільки буде 8×9» тощо. "</string>
+    <string name="script_tutorial_page2_content2">Скриптинг вирішує цю енергозатратну проблему. Вам достатньо створити лише одну карту що має питання «Скільки буде А×B», де А та В є випадковими числами</string>
+    <string name="script_tutorial_page3_title">Змініть питання та відповідь</string>
+    <string name="script_tutorial_page3_content1">Щоб зробити карту для вивчення таблиці множення, вам потрібно встановити наступне:</string>
+    <string name="script_tutorial_page3_question">Скільки буде {A} × {B}</string>
+    <string name="script_tutorial_page3_content2">Замість літер A, B, C скрипт буде підставляти випадкові числа (С - змінна, що зберігає відповідь). Щоб розрізнити звичайні літери від змінних, їх потрібно взяти в фігурні дужки</string>
+    <string name="script_tutorial_page4_title">Час імплементувати код</string>
+    <string name="script_tutorial_page4_content1">Давайте тепер перейдемо до коду. Під капотом, Solocards використовує мову програмування Lua. Ось код:</string>
+    <string name="script_tutorial_page4_content2_part1">Ми використовуємо функцію</string>
+    <string name="script_tutorial_page4_content2_part2">щоб отримати випадкове число від 1 до 10 включно</string>
+    <string name="script_tutorial_page4_content3">Тепер ми множимо ці числа та записуємо добуток в змінну С. Ця змінна зберігатиме відповідь</string>
+    <string name="script_tutorial_page5_title">Тестування коду</string>
+    <string name="script_tutorial_page5_content1">Вітаю, тепер цю карту можна використовувати для вивчення таблиці множення!</string>
+    <string name="script_tutorial_page5_content2">Натисність на кнопку Тест в редакторі коду щоб згенерувати карту</string>
+    <string name="script_tutorial_page5_content3">До речі, ви також можете згенерувати випадкові опції для Булевого режиму та режиму опцій. Натисність Далі, щоб дізнатися більше</string>
+    <string name="script_tutorial_page6_title">Випадкові опції</string>
+    <string name="script_tutorial_page6_content1">Щоб згенерувати випадкову опцію, для цього треба зробити схожі кроки. В бланці опцій додаємо опцію {D}, де D - якесь число (не забувайте про фігурні дужки)</string>
+    <string name="script_tutorial_page6_content2">Для цього треба модифікувати код наступним чином:</string>
+    <string name="script_tutorial_page6_content3">В нашому коді, число D - це просто відповідь мінус один.</string>
+    <string name="script_tutorial_page7_title">Більше випадкових опцій</string>
+    <string name="script_tutorial_page7_content1">Ви можете додати більше випадкових опцій до цієї карти. Для цього додайте наприклад {E} та {F} в бланк, і змініть код:</string>
+    <string name="script_tutorial_page7_content2">Змінна E - це просто відповідь плюс 1, а змінна F - це відповідь мінус 2. Тепер у вас 3 випадкові опції!</string>
+    <string name="script_tutorial_page8_title">Просунуті речі</string>
+    <string name="script_tutorial_page8_content1">Все основне було сказано в цьому турі. Якщо ви хочете спробувати зробити щось складніше, ви можете використовувати Lua-строки, списки, умови та цикли.</string>
+    <string name="script_tutorial_page8_content2">Також, якщо ви згенеруєте строку з декількома опціями, що розділені комою, і якщо це помістити в бланк опцій, то ви створете одночасно декілька опцій (це не розглядаємо)</string>
+    <string name="script_tutorial_page8_content3">Дивіться Example Quiz в меню квестів, щоб знайти більше прикладів</string>
+    <string name="script_tutorial_page8_goodluck">Удачі в написанні скриптів!</string>
+    <string name="prev">Назад</string>
+    <string name="next">Далі</string>
+    <string name="script_tutorial_dialog_title">Тур по скриптингу</string>
+    <string name="flip_mode_descr">Усно дайте відповідь на питання, а потім перевірте себе</string>
+    <string name="writing_mode_descr">Введіть відповідь з клавіатури</string>
+    <string name="boolean_mode_descr">Дайте ТАК або НІ на запитання. Потрібно хоча б одну опцію в бланці опцій</string>
+    <string name="option_mode_descr">Показати декілька опцій. Потрібно більше опцій в бланку</string>
+    <string name="mixed_mode_descr">Всі режими в одному тесті</string>
+
+    <string-array name="faq_questions">
+        <item>Що таке Solocards?</item>
+        <item>Що таке флешкартка?</item>
+        <item>Як використовувати флешкартки для навчання?</item>
+        <item>Що таке квест?</item>
+        <item>Що кожен ігровий режим значить?</item>
+        <item>Як створювати скрипти?</item>
+        <item>Що можна зробити в хмарному сховищі?</item>
+        <item>Які дані користувача потрібні для хмарного сховища?</item>
+        <item>Що робити якщо бачу «Не вдається завантажити файл» при імпорті квесту або прогресу?</item>
+        <item>Де контактні дані розробника?</item>
+        <item>Що за бланк опцій?</item>
+        <item>Чому Solocards?</item>
+    </string-array>
+
+    <string-array name="faq_answers">
+        <item>Solocards - це простий офлайн-застосунок для створення та керування флешкартками</item>
+        <item>Флешкартка - це просто карта, яка має питання та відповідь на різних сторонах</item>
+        <item>Існує багато способів у використанні карток, але найпопулярнішим є наступний метод: Візьми буль-яку картку та поверни її стороню з надписом "Питання". Ваша ціль усно відповісти на питання, що написано на картці. Згодом, переверніть її і перевірте себе</item>
+        <item>Це список карток (тобто колода карток)</item>
+        <item>В редакторі карт натисність на Грати, і потім натисність на знак питання. Ви побачите опис всіх режимів</item>
+        <item>Ви можете знайти короткий тур по скриптингу в редакторі коду</item>
+        <item>Хмарне сховище дозволяє зберігати квести в хмарі. Це робить обмін даними між пристроями простішим</item>
+        <item>Тільки E-mail</item>
+        <item>Будь-те впевнені, щоб ви вибрали саме квест замість файлу прогресу (або навпаки). Якщо проблема не вирішується, зробуйте звернутися до мене за email</item>
+        <item>В меню "Про додаток"</item>
+        <item>Це список всіх неправильних опцій цієї карти</item>
+        <item>Solocards є простим способом керуванні картами, що робить цей додаток корисним для більшістьох видів наук, особливо математика та програмування (завдяки скриптингу)</item>
+    </string-array>
+
+    <string name="onboarding_page1_title">Вітаємо в Solocards</string>
+    <string name="onboarding_page1_content">Новий та сучасний спосіб керувати флешкартками</string>
+    <string name="onboarding_page2_title">Швидкий Редактор</string>
+    <string name="onboarding_page2_content">Створюй карти за лічені секунди</string>
+    <string name="onboarding_page3_title">Ігрові Режими</string>
+    <string name="onboarding_page3_content">Використовуй карти в 5 різноманітних режимах</string>
+    <string name="onboarding_page4_title">Пиши Скрипти</string>
+    <string name="onboarding_page4_content">Генеруй випадкові карти використовуючи програмування! Досвід необов\'язковий</string>
+    <string name="onboarding_page5_title">Поширюй Карти</string>
+    <string name="onboarding_page5_content">Пиширюй квести з друзями та знайомими</string>
+    <string name="onboarding_page6_title">Офлайн Додаток</string>
+    <string name="onboarding_page6_content">Створюй &amp; вивчай без перешкод!</string>
+
+    <string name="continue_">Далі</string>
+    <string name="got_it_thx">Добре, дякую</string>
+    <string name="exported_successfully">Експортовано успішно</string>
+    <string name="no_quizzes">Квести відсутні</string>
+
+    <string name="occurrences">Кількість екземплярів</string>
+    <string name="occurrences_descr">Скільки раз ця карта буде випадати в тесті</string>
+    <string name="faq_screen_title">Поширені запитання</string>
+
+    <string name="about">Про додаток</string>
+    <string name="about_descr">Solocards - це простий офлайн-застосунок для створення та керування флешкартками з можливостями написанні скриптів</string>
+</resources>

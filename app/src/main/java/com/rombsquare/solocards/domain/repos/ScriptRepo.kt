@@ -1,5 +1,0 @@
-package com.rombsquare.solocards.domain.repos
-
-interface ScriptRepo {
-    suspend fun runScript(code: String, vars: List<String>): Result<Map<String, String>>
-}
