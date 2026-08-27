@@ -71,7 +71,8 @@ fun OptionField(
         ) {
             item {
                 OutlinedTextField(
-                    modifier = Modifier.height(48.dp),
+                    modifier = Modifier
+                        .height(48.dp),
                     value = if(isFocused) optionToAdd else stringResource(R.string.option_field_placeholder),
                     onValueChange = { optionToAdd = it },
                     colors = TextFieldDefaults.colors(

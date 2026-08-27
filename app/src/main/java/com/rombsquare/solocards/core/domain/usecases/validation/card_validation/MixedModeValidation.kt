@@ -12,10 +12,13 @@ import com.rombsquare.solocards.core.domain.models.GameMode
 
 class MixedModeValidation {
     operator fun invoke(cards: List<Card>): ValidationResult {
+
+        // Check for card without allowed modes
         if (cards.any { it.allowedModes.isEmpty() }) {
             return ValidationResult.Failure(CardValidationError.NoAllowedModes)
         }
 
+        // Check for boolean mode
         if (
             cards.any { card ->
                 card.allowedModes.contains(GameMode.Boolean) && card.options.filterNot { it.isEmpty() }.isEmpty()
@@ -24,6 +27,7 @@ class MixedModeValidation {
             return ValidationResult.Failure(CardValidationError.EmptyOptions)
         }
 
+        // Check for option mode
         if (
             cards.any { card ->
                 card.allowedModes.contains(GameMode.Option) && (card.options.size+1 < card.optionCount)

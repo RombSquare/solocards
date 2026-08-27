@@ -1,6 +1,6 @@
 package com.rombsquare.solocards.core.domain.models
 
-// The card, which is ready for being shown in UI
+// The card with an executed script
 data class GeneratedCard(
     val question: String,
     val answer: String,

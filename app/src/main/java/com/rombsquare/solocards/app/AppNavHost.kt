@@ -1,9 +1,5 @@
 package com.rombsquare.solocards.app
 
-import androidx.compose.animation.AnimatedContentTransitionScope
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -11,7 +7,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -47,21 +42,16 @@ data class Game(
 object Faq
 
 @Composable
-fun AppNavHost(
-    navController: NavHostController = rememberNavController(),
-) {
+fun AppNavHost() {
+    val navController = rememberNavController()
+
     NavHost(
         navController = navController,
         startDestination = Menu,
-        enterTransition = { fadeIn(tween(300)) },
-        exitTransition = { fadeOut(tween(300)) },
-        popEnterTransition = { fadeIn(animationSpec = tween(300)) },
-        popExitTransition = { fadeOut(animationSpec = tween(300)) }
     ) {
-        composable<Menu>(
-            enterTransition = { fadeIn(animationSpec = tween(500)) },
-            exitTransition = { fadeOut(animationSpec = tween(500)) }
-        ) {
+
+        // Menu screen
+        composable<Menu> {
             val menuViewModel: MenuViewModel = koinViewModel()
             val uiState by menuViewModel.uiState.collectAsState()
 
@@ -101,10 +91,8 @@ fun AppNavHost(
 
         }
 
-        composable<Editor>(
-            enterTransition = { fadeIn(animationSpec = tween(500)) },
-            exitTransition = { fadeOut(animationSpec = tween(500)) }
-        ) {
+        // Editor screen
+        composable<Editor> {
             val viewModel: EditorViewModel = koinViewModel()
             val uiState by viewModel.uiState.collectAsState()
 
@@ -121,10 +109,8 @@ fun AppNavHost(
             )
         }
 
-        composable<Game>(
-            enterTransition = { fadeIn(animationSpec = tween(500)) },
-            exitTransition = { fadeOut(animationSpec = tween(500)) }
-        ) {
+        // Game screen
+        composable<Game> {
             val viewModel: GameViewModel = koinViewModel()
             val uiState by viewModel.uiState.collectAsState()
 
@@ -141,6 +127,7 @@ fun AppNavHost(
             )
         }
 
+        // Help screen (FAQ)
         composable<Faq> {
             FaqScreen(
                 onHome = {

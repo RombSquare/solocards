@@ -3,6 +3,7 @@ package com.rombsquare.solocards.features.menu_feature.domain.usecases.serialize
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 import com.rombsquare.solocards.features.menu_feature.domain.repos.SerializerRepo
 
+// Deserialize a quiz and insert it into a local storage
 class DeserializeQuiz(
     val dataRepo: DataRepo,
     val serializerRepo: SerializerRepo

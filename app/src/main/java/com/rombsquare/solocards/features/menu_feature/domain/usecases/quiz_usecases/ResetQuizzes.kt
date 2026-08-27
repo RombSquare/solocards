@@ -2,7 +2,7 @@ package com.rombsquare.solocards.features.menu_feature.domain.usecases.quiz_usec
 
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 
-// Also erases cards inside quizzes
+// Also erases cards and sessions inside quizzes
 class ResetQuizzes(
     val repo: DataRepo
 ) {

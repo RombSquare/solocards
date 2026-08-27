@@ -37,8 +37,7 @@ fun YesNoButtons(
             Button(
                 modifier = Modifier
                     .height(60.dp)
-                    .width(120.dp)
-                ,
+                    .width(120.dp),
                 onClick = onYesClick,
                 shape = RoundedCornerShape(10),
             ) {

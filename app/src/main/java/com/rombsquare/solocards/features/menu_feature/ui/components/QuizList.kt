@@ -56,7 +56,7 @@ fun QuizList(
     ) {
         itemsIndexed(
             items = quizzes,
-            key = { i, quiz -> quiz.id }
+            key = { _, quiz -> quiz.id }
         ) { i, quiz ->
             QuizItem(
                 modifier = Modifier.animateItem(),
@@ -66,7 +66,6 @@ fun QuizList(
                     Log.d("SolocardsTest", "Quiz long tapped: $quiz")
                     onLongQuizClick(quiz)
                 },
-                selectionMode = (selectedQuiz != null),
                 onFavClicked = { onFavClicked(quiz) },
                 onArchived = { onArchived(quiz) },
                 isSelected = (selectedQuiz == quiz),

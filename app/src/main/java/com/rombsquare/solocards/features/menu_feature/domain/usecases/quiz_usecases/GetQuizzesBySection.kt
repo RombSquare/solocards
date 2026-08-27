@@ -1,7 +1,7 @@
 package com.rombsquare.solocards.features.menu_feature.domain.usecases.quiz_usecases
 
 import com.rombsquare.solocards.core.domain.models.Quiz
-import com.rombsquare.solocards.core.domain.models.Section
+import com.rombsquare.solocards.features.menu_feature.domain.models.Section
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 import com.rombsquare.solocards.features.menu_feature.domain.models.QuizSortMethod
 import com.rombsquare.solocards.features.menu_feature.domain.models.QuizSortOptions

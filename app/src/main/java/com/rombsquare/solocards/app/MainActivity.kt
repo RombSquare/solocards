@@ -19,19 +19,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.edit
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.rombsquare.solocards.core.di.coreModule
 import com.rombsquare.solocards.core.ui.theme.SolocardsTheme
-import com.rombsquare.solocards.features.cloud_feature.di.cloudModule
-import com.rombsquare.solocards.features.editor_feature.di.editorModule
-import com.rombsquare.solocards.features.game_feature.di.gameModule
-import com.rombsquare.solocards.features.menu_feature.di.menuModule
 import com.rombsquare.solocards.features.onboarding_feature.ui.OnboardingScreen
-import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.GlobalContext.startKoin
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 class MainActivity : ComponentActivity() {
+
+    // Don't autoscale fonts
     override fun attachBaseContext(newBase: Context) {
         val configuration = Configuration(newBase.resources.configuration).apply {
             fontScale = 1.0f
@@ -49,6 +43,7 @@ class MainActivity : ComponentActivity() {
             val context = LocalContext.current
             val prefs = remember { context.getSharedPreferences("app_prefs", MODE_PRIVATE) }
 
+            // Is app launched for the first time?
             LaunchedEffect(Unit) {
                 if (prefs.getBoolean("is_first_launch", true)) {
                     prefs.edit { putBoolean("is_first_launch", false) }
@@ -59,11 +54,9 @@ class MainActivity : ComponentActivity() {
                 mutableStateOf(prefs.getBoolean("is_first_launch", true))
             }
 
-//            var showOnboardingScreen by remember {
-//                mutableStateOf(true)
-//            }
-
             SolocardsTheme {
+
+                // If app is launched for the first time, show onboarding screen
                 if (showOnboardingScreen) {
                     OnboardingScreen(
                         onClose = { showOnboardingScreen = false }
@@ -75,7 +68,6 @@ class MainActivity : ComponentActivity() {
                     ) {
                         AppNavHost()
                     }
-
                 }
             }
         }

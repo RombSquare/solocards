@@ -32,7 +32,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.rombsquare.solocards.R
-import com.rombsquare.solocards.core.domain.models.Section
+import com.rombsquare.solocards.features.menu_feature.domain.models.Section
 import com.rombsquare.solocards.features.menu_feature.ui.models.UiEvent
 import com.rombsquare.solocards.features.menu_feature.ui.models.UiState
 import kotlinx.coroutines.launch

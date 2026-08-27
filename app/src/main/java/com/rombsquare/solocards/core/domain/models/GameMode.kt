@@ -6,11 +6,4 @@ enum class GameMode(val string: String) {
     Boolean("Boolean mode"),
     Option("Option mode"),
     Mixed("Mixed mode");
-
-    // Get random mode except Mixed
-    companion object {
-        fun random(): GameMode {
-            return entries.filterNot { it == Mixed }.random()
-        }
-    }
 }

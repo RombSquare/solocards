@@ -1,10 +1,11 @@
 package com.rombsquare.solocards.features.menu_feature.domain.usecases.serializer_usecases
 
-import com.rombsquare.solocards.core.domain.models.Progress
+import com.rombsquare.solocards.features.menu_feature.domain.models.Progress
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 import com.rombsquare.solocards.features.menu_feature.domain.repos.SerializerRepo
 import kotlinx.coroutines.flow.first
 
+// Get a JSON string of entire progres
 class SerializeProgress(
     val dataRepo: DataRepo,
     val serializerRepo: SerializerRepo

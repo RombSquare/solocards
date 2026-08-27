@@ -18,7 +18,7 @@ data class UiState(
     val time: Duration = 0.seconds,
     val isEnd: Boolean = false,
     val isError: Boolean = false,
-    val goHome: Boolean = false, // it true, leave the screen
+    val goHome: Boolean = false, // If true, leave the screen
     val dialog: Dialog? = null,
     val mode: GameMode = GameMode.Flip,
 

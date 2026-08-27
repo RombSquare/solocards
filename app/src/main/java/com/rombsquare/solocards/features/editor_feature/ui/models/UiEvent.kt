@@ -26,7 +26,7 @@ sealed interface UiEvent {
 
     data object HideDialog: UiEvent
 
-    data object Play: UiEvent
+    data object PlayClicked: UiEvent
     data class OnModeClicked(val mode: GameMode): UiEvent
 
     // Settings

@@ -1,9 +1,10 @@
 package com.rombsquare.solocards.core.domain.utils
 
 import com.rombsquare.solocards.core.domain.models.Card
-import com.rombsquare.solocards.core.domain.models.GameMode
 import com.rombsquare.solocards.core.domain.models.GeneratedCard
 import com.rombsquare.solocards.core.domain.repos.ScriptRepo
+
+// Takes the Card, executes the script, and outputs a GeneratedCard
 
 class CardGenerator(
     val scriptRepo: ScriptRepo

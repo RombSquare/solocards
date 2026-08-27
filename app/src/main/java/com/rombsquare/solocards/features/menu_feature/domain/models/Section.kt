@@ -1,4 +1,4 @@
-package com.rombsquare.solocards.core.domain.models
+package com.rombsquare.solocards.features.menu_feature.domain.models
 
 sealed interface Section {
     data object Everything: Section

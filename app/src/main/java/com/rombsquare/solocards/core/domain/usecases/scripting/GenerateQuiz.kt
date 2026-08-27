@@ -1,13 +1,12 @@
 package com.rombsquare.solocards.core.domain.usecases.scripting
 
 import com.rombsquare.solocards.core.domain.utils.CardGenerator
-import com.rombsquare.solocards.core.domain.models.Card
 import com.rombsquare.solocards.core.domain.models.GeneratedCard
 import com.rombsquare.solocards.core.domain.models.GeneratingResult
-import com.rombsquare.solocards.core.domain.models.Quiz
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 import kotlinx.coroutines.flow.first
 
+// Execute all cards in a quiz
 class GenerateQuiz(
     private val cardGenerator: CardGenerator,
     private val repo: DataRepo

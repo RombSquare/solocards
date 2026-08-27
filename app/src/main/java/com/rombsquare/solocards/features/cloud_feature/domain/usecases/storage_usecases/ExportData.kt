@@ -1,6 +1,6 @@
 package com.rombsquare.solocards.features.cloud_feature.domain.usecases.storage_usecases
 
-import com.rombsquare.solocards.core.domain.models.Progress
+import com.rombsquare.solocards.features.menu_feature.domain.models.Progress
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 import com.rombsquare.solocards.features.cloud_feature.domain.repos.CloudStorageRepo
 import kotlinx.coroutines.flow.first

@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.toRoute
 import com.rombsquare.solocards.app.Editor
 import com.rombsquare.solocards.core.domain.models.Card
@@ -367,7 +366,7 @@ class EditorViewModel(
                 setDialog(Dialog.Code)
             }
 
-            UiEvent.Play -> {
+            UiEvent.PlayClicked -> {
                 val result = cardValidationUseCases.basicCardValidation(cards.value)
 
                 onSuccessCardValidation(result) {

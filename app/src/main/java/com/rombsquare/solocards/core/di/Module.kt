@@ -18,7 +18,6 @@ import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.
 import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.BooleanModeValidation
 import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.CardTextValidation
 import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.CardValidationUseCases
-import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.EditCardValidation
 import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.MixedModeValidation
 import com.rombsquare.solocards.core.domain.usecases.validation.card_validation.OptionModeValidation
 import com.rombsquare.solocards.core.domain.usecases.validation.quiz_validation.QuizValidation
@@ -76,7 +75,6 @@ val coreModule = module {
         CardValidationUseCases(
             basicCardValidation = BasicCardValidation(),
             booleanModeValidation = BooleanModeValidation(),
-            editCardValidation = EditCardValidation(),
             mixedModeValidation = MixedModeValidation(),
             optionModeValidation = OptionModeValidation(),
             cardTextValidation = CardTextValidation()

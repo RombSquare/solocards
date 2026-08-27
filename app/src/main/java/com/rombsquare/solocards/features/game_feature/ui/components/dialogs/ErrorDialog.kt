@@ -31,7 +31,7 @@ fun ErrorDialog(
         title = {Text(stringResource(R.string.game_error_title))},
         text = {
             Column {
-                Text("One of your cards threw an error during the creation of quiz. Please check the code of this card:")
+                Text(stringResource(R.string.game_error_descr))
 
                 Text(
                     text = "\n${stringResource(R.string.question)}: ${wrongCard.question}\n${stringResource(R.string.answer)}: ${wrongCard.answer}",

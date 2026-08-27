@@ -5,6 +5,7 @@ import com.rombsquare.solocards.core.domain.repos.DataRepo
 import com.rombsquare.solocards.features.menu_feature.domain.repos.SerializerRepo
 import kotlinx.coroutines.flow.first
 
+// Get JSON string of a quiz
 class SerializeQuiz(
     val dataRepo: DataRepo,
     val serializerRepo: SerializerRepo

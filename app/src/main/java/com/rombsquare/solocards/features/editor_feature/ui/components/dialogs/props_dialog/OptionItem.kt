@@ -25,6 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
@@ -62,7 +63,13 @@ fun OptionItem(
             verticalAlignment = Alignment.CenterVertically
         ) {
             BasicTextField(
-                modifier = Modifier.weight(1f),
+                modifier = Modifier
+                    .weight(1f)
+                    .onFocusChanged { focusState ->
+                        if (isFocused && !focusState.isFocused) {
+                            onOptionDone(currentText)
+                        }
+                    },
                 value = if(isFocused) currentText else option,
                 onValueChange = {
                     currentText = it

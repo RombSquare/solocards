@@ -6,7 +6,7 @@ import com.google.firebase.Timestamp
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.firestore
 import com.google.firebase.firestore.toObject
-import com.rombsquare.solocards.core.domain.models.Progress
+import com.rombsquare.solocards.features.menu_feature.domain.models.Progress
 import com.rombsquare.solocards.features.cloud_feature.data.mappers.toDomain
 import com.rombsquare.solocards.features.cloud_feature.data.mappers.toFirestoreObject
 import com.rombsquare.solocards.features.cloud_feature.data.models.MiscDataObject
@@ -27,6 +27,7 @@ class FirestoreRepo: CloudStorageRepo {
             return
         }
 
+        // Export progress
         db.collection("users")
             .document(userId)
             .collection("data")
@@ -35,6 +36,7 @@ class FirestoreRepo: CloudStorageRepo {
             .addOnSuccessListener { Log.d("FirebaseTest", "Exported successfully") }
             .addOnFailureListener { Log.e("FirebaseTest", "Error: $it") }
 
+        // Export misc data (modified at and quiz count)
         db.collection("users")
             .document(userId)
             .collection("data")

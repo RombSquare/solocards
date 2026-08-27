@@ -31,7 +31,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.pluralStringResource
@@ -44,10 +43,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rombsquare.solocards.R
 import com.rombsquare.solocards.core.domain.models.GameMode
-import com.rombsquare.solocards.core.domain.models.Session
 import com.rombsquare.solocards.core.domain.models.Satisfaction
+import com.rombsquare.solocards.core.domain.models.Session
 import com.rombsquare.solocards.core.domain.utils.toDateFormat
-import com.rombsquare.solocards.core.domain.utils.toMinuteSecondFormat
 import com.rombsquare.solocards.core.ui.theme.SolocardsTheme
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.seconds

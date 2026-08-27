@@ -1,6 +1,6 @@
 package com.rombsquare.solocards.features.menu_feature.domain.repos
 
-import com.rombsquare.solocards.core.domain.models.Progress
+import com.rombsquare.solocards.features.menu_feature.domain.models.Progress
 import com.rombsquare.solocards.features.menu_feature.domain.models.QuizWithCards
 
 interface SerializerRepo {

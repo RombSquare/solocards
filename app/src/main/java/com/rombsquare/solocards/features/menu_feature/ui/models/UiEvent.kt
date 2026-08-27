@@ -2,7 +2,7 @@ package com.rombsquare.solocards.features.menu_feature.ui.models
 
 import com.rombsquare.solocards.core.domain.models.Quiz
 import com.rombsquare.solocards.features.menu_feature.domain.models.QuizSortMethod
-import com.rombsquare.solocards.core.domain.models.Section
+import com.rombsquare.solocards.features.menu_feature.domain.models.Section
 import com.rombsquare.solocards.features.menu_feature.domain.models.SortDirection
 
 sealed interface UiEvent {

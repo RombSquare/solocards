@@ -4,7 +4,7 @@ import com.rombsquare.solocards.core.domain.repos.DataRepo
 import com.rombsquare.solocards.features.menu_feature.domain.repos.SerializerRepo
 import kotlinx.serialization.SerializationException
 
-
+// If the progress was imported successfully, erase current data and insert new one
 class DeserializeProgress(
     val dataRepo: DataRepo,
     val serializerRepo: SerializerRepo

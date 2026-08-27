@@ -34,7 +34,7 @@ fun readJsonFromFile(context: Context, uri: Uri): String? {
             }
         }
         stringBuilder.toString()
-    } catch(e: Exception) {
+    } catch(_: Exception) {
         null
     }
 }

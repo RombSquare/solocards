@@ -42,9 +42,9 @@ import com.rombsquare.solocards.R
 import com.rombsquare.solocards.core.domain.utils.toDateFormat
 import com.rombsquare.solocards.core.ui.theme.SolocardsTheme
 import com.rombsquare.solocards.core.ui.utils.components.TextWithIcon
+import com.rombsquare.solocards.core.ui.utils.components.WarnDialog
 import com.rombsquare.solocards.features.cloud_feature.ui.models.ToastMessage
 import com.rombsquare.solocards.features.cloud_feature.ui.models.UiState
-import com.rombsquare.solocards.features.menu_feature.ui.components.dialogs.WarnDialog
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import kotlin.time.Instant
@@ -208,10 +208,7 @@ fun CloudDialog(
                                 }
                             )
                         }
-
                     }
-
-
                 }
             }
         },

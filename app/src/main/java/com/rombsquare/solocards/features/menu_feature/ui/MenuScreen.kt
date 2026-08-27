@@ -48,7 +48,7 @@ import com.rombsquare.solocards.R
 import com.rombsquare.solocards.core.domain.models.Quiz
 import com.rombsquare.solocards.core.domain.models.QuizValidationError
 import com.rombsquare.solocards.core.domain.models.TagValidationError
-import com.rombsquare.solocards.core.domain.models.Section
+import com.rombsquare.solocards.features.menu_feature.domain.models.Section
 import com.rombsquare.solocards.features.menu_feature.ui.components.DialogHandler
 import com.rombsquare.solocards.features.menu_feature.ui.components.MenuBottomSheetHandler
 import com.rombsquare.solocards.features.menu_feature.ui.components.MenuDrawer
@@ -109,7 +109,7 @@ fun MenuScreen(
 
                 Log.d("SolocardsTest", "Successfully read the json! The content: $jsonString")
             } catch (e: Exception) {
-
+                Log.e("SolocardsTest", "Error during opening document: $e")
             }
         }
     }

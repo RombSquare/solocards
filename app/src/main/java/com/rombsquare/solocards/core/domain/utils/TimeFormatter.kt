@@ -6,6 +6,7 @@ import kotlin.time.Duration
 import kotlin.time.Instant
 import java.time.Instant as JavaInstant
 
+// Outputs the string in format dd.MM.yyyy
 fun Instant.toDateFormat(): String {
     val javaInstant = JavaInstant.ofEpochSecond(this.epochSeconds, this.nanosecondsOfSecond.toLong())
 
@@ -15,18 +16,13 @@ fun Instant.toDateFormat(): String {
     return formatter.format(javaInstant)
 }
 
-fun Duration.toMinuteSecondFormat(): String {
-    return "${this.inWholeMinutes}m ${this.inWholeSeconds % 60}s"
-}
-
+// Outputs the string in format mm:ss
 fun Duration.toColonFormat(): String {
     var minutesString = this.inWholeMinutes.toString()
     var secondsString = (this.inWholeSeconds % 60).toString()
 
     if (minutesString.length == 1) minutesString = "0$minutesString"
     if (secondsString.length == 1) secondsString = "0$secondsString"
-
-
 
     return "$minutesString:$secondsString"
 }

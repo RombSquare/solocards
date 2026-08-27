@@ -1,6 +1,5 @@
 package com.rombsquare.solocards.features.editor_feature.domain.usecases.quiz_settings_usecases
 
-import com.rombsquare.solocards.core.domain.models.Quiz
 import com.rombsquare.solocards.core.domain.repos.DataRepo
 import kotlin.time.Clock
 

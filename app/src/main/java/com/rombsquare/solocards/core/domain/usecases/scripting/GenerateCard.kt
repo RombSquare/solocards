@@ -4,6 +4,7 @@ import com.rombsquare.solocards.core.domain.utils.CardGenerator
 import com.rombsquare.solocards.core.domain.models.Card
 import com.rombsquare.solocards.core.domain.models.GeneratedCard
 
+// Execute a script on a single card
 class GenerateCard(
     private val cardGenerator: CardGenerator
 ) {

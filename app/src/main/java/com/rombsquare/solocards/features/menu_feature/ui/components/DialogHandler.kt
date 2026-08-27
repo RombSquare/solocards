@@ -9,7 +9,7 @@ import com.rombsquare.solocards.features.menu_feature.ui.components.dialogs.Rena
 import com.rombsquare.solocards.features.menu_feature.ui.components.dialogs.RestoreQuizDialog
 import com.rombsquare.solocards.features.menu_feature.ui.components.dialogs.SettingsDialog
 import com.rombsquare.solocards.features.menu_feature.ui.components.dialogs.TagDialog
-import com.rombsquare.solocards.features.menu_feature.ui.components.dialogs.WarnDialog
+import com.rombsquare.solocards.core.ui.utils.components.WarnDialog
 import com.rombsquare.solocards.features.menu_feature.ui.models.Dialog
 import com.rombsquare.solocards.features.menu_feature.ui.models.UiEvent
 import com.rombsquare.solocards.features.menu_feature.ui.models.UiState

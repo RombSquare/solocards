@@ -39,7 +39,6 @@ import com.rombsquare.solocards.core.domain.models.CardSide
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
-import androidx.compose.material3.CardElevation
 
 // The content for a single side of a card
 @Composable

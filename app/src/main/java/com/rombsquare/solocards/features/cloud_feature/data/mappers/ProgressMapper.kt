@@ -1,6 +1,6 @@
 package com.rombsquare.solocards.features.cloud_feature.data.mappers
 
-import com.rombsquare.solocards.core.domain.models.Progress
+import com.rombsquare.solocards.features.menu_feature.domain.models.Progress
 import com.rombsquare.solocards.features.cloud_feature.data.models.ProgressObject
 
 fun Progress.toFirestoreObject() = ProgressObject(

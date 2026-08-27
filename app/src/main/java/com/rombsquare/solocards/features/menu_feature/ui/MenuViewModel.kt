@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.rombsquare.solocards.core.domain.models.Quiz
-import com.rombsquare.solocards.core.domain.models.Section
+import com.rombsquare.solocards.features.menu_feature.domain.models.Section
 import com.rombsquare.solocards.features.menu_feature.domain.usecases.quiz_usecases.QuizUseCases
 import com.rombsquare.solocards.features.menu_feature.ui.models.Dialog
 import com.rombsquare.solocards.features.menu_feature.domain.models.QuizSortMethod
@@ -71,12 +71,8 @@ class MenuViewModel(
         viewModelScope.launch {
             Log.d("SolocardsTest", "App is started")
 
-            // It will generate example quizzes only if there are no quizzes in database
+            // It will generate example quizzes only if there are no quizzes in a local database
             quizUseCases.generateExamples()
-
-            _uiState.value = _uiState.value.copy(
-                tags = emptyList() //quizUseCases.getAllTags()
-            )
         }
     }
 
@@ -135,7 +131,6 @@ class MenuViewModel(
                     UiEffect.ShowValidationErrorToast((result as ValidationResult.Failure).reason)
                 )
             }
-
         }
     }
 

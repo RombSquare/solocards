@@ -37,7 +37,6 @@ fun QuizItem(
     quiz: Quiz,
     onClick: () -> Unit,
     onLongClick: () -> Unit,
-    selectionMode: Boolean,
     onFavClicked: () -> Unit,
     onArchived: () -> Unit,
     isSelected: Boolean,
@@ -47,7 +46,7 @@ fun QuizItem(
     var swipeIsTriggered by remember(quiz.id) { mutableStateOf(false) }
 
     val dismissState = rememberSwipeToDismissBoxState(
-        SwipeToDismissBoxValue.Settled,
+        initialValue = SwipeToDismissBoxValue.Settled,
         positionalThreshold = SwipeToDismissBoxDefaults.positionalThreshold,
         confirmValueChange = { dismissValue ->
             if (dismissValue == SwipeToDismissBoxValue.StartToEnd ||
