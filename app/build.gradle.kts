@@ -20,7 +20,7 @@ val localProperties = Properties().apply {
 android {
     namespace = "com.rombsquare.solocards"
     compileSdk {
-        version = release(36)
+        version = release(37)
     }
 
     kotlin {
@@ -30,8 +30,7 @@ android {
     defaultConfig {
         applicationId = "com.rombsquare.solocards"
         minSdk = 26
-        //noinspection OldTargetApi
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
