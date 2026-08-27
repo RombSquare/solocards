@@ -13,7 +13,7 @@ data class QuizExampleUnit(
     val options: List<String> = emptyList(),
     val optionCount: Int = 4,
     val count: Int = 1,
-    val allowedModes: List<GameMode> = GameMode.entries
+    val allowedModes: List<GameMode> = GameMode.entries.dropLast(1)
 )
 
 val quiz1 = listOf(
