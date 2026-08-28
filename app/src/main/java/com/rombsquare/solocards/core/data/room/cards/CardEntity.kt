@@ -25,7 +25,6 @@ data class CardEntity(
     val question: String,
     val answer: String,
     val code: String,
-    val isCodeEnabled: Boolean,
     val count: Int,
     val options: String, // Separated by comma
     val optionCount: Int,

@@ -24,8 +24,9 @@ import com.rombsquare.solocards.core.domain.usecases.validation.quiz_validation.
 import com.rombsquare.solocards.core.domain.usecases.validation.quiz_validation.QuizValidationUseCases
 import com.rombsquare.solocards.core.domain.usecases.validation.tag_validation.TagValidation
 import com.rombsquare.solocards.core.domain.usecases.validation.tag_validation.TagValidationUseCases
-import com.rombsquare.solocards.core.domain.utils.CardGenerator
+import com.rombsquare.solocards.core.domain.utils.scripting.CardGenerator
 import com.rombsquare.solocards.core.domain.utils.GetQuizById
+import com.rombsquare.solocards.core.domain.utils.scripting.QuizGenerator
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -41,6 +42,7 @@ val coreModule = module {
     }
 
     single { CardGenerator(get()) }
+    single { QuizGenerator(get()) }
     single { GetQuizById(get()) }
 
     // Daos

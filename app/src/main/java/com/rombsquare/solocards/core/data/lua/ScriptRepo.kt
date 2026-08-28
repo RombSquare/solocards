@@ -15,51 +15,7 @@ import org.luaj.vm2.lib.jse.JseBaseLib
 import org.luaj.vm2.lib.jse.JseMathLib
 import kotlin.time.Duration.Companion.milliseconds
 
-// Built-in functions for scripting in Solocards
-// 1. rand(a, b)  -  generates a random integer in [a; b]
-// 2. pick(list)  -  pick a random item from the list
-// 3. randOptions(min, max, n, excluded)
-// -   it unpacks the values for n variables, where each value is random in [min; max] with excluded value
-
-val precode = """    
-    local rand = math.random
-    local min = math.min
-    local max = math.max
-    local abs = math.abs
-    
-    local function randExcept(a, b, c)
-        local val = math.random(a, b)
-        if val == c and a ~= c then
-            return a
-        end
-        return val
-    end
-    
-    local function pick(list)
-        if #list == 0 then return nil end
-        return list[math.random(#list)]
-    end
-    
-    local function randOptions(min, max, count, excluded)
-        local pool = {}
-        for i = min, max do
-            if i ~= excluded then
-                table.insert(pool, i)
-            end
-        end
-
-        local totalAvailable = #pool
-        local selectCount = math.min(count, totalAvailable)
-
-        for i = 1, selectCount do
-            local randIndex = math.random(i, totalAvailable)
-            pool[i], pool[randIndex] = pool[randIndex], pool[i]
-        end
-
-        local results = { table.unpack(pool, 1, selectCount) }
-        return table.unpack(results)
-    end
-""".trimIndent()
+// Runs a Lua script and returns the list of variables and its values
 
 class ScriptRepoImpl: ScriptRepo {
 
@@ -80,7 +36,11 @@ class ScriptRepoImpl: ScriptRepo {
     }
 
     // It runs the code and returns all variables and its values
-    override suspend fun runScript(code: String, vars: List<String>): Result<Map<String, String>> = withContext(Dispatchers.Default) {
+    override suspend fun runScript(
+        precode: String,
+        code: String,
+        vars: List<String>
+    ): Result<Map<String, String>> = withContext(Dispatchers.Default) {
         try {
             val globals = createSandbox()
 
@@ -89,9 +49,7 @@ class ScriptRepoImpl: ScriptRepo {
                 chunk.call()
 
                 val values = vars.associateWith { varName ->
-                    val value = globals.get(varName)
-                    if (!value.isnil()) value.tojstring() else
-                        throw Exception("Your card contains '$varName', which your code doesn't")
+                    globals.get(varName).tojstring()
                 }
 
                 Result.success(values)

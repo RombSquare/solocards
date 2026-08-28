@@ -1,6 +1,6 @@
 package com.rombsquare.solocards.core.domain.usecases.scripting
 
-import com.rombsquare.solocards.core.domain.utils.CardGenerator
+import com.rombsquare.solocards.core.domain.utils.scripting.CardGenerator
 import com.rombsquare.solocards.core.domain.models.Card
 import com.rombsquare.solocards.core.domain.models.GeneratedCard
 

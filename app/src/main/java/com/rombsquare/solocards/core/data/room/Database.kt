@@ -14,7 +14,7 @@ import com.rombsquare.solocards.core.data.room.quizzes.QuizEntity
 
 @Database(
     entities = [QuizEntity::class, CardEntity::class, SessionEntity::class],
-    version = 23
+    version = 24
 )
 @TypeConverters(InstantConverters::class, SatisfactionConverter::class)
 abstract class AppDatabase : RoomDatabase() {

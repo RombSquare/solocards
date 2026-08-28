@@ -9,7 +9,6 @@ data class Card(
     val question: String = "",
     val answer: String = "",
     val code: String = "",
-    val isCodeEnabled: Boolean = true,
     val count: Int = 1,
     val options: List<String> = emptyList(),
     val optionCount: Int = 4,

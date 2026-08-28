@@ -9,7 +9,6 @@ fun CardEntity.toDomain() = Card(
     this.question,
     this.answer,
     this.code,
-    this.isCodeEnabled,
     this.count,
 
     options = this.options.split(",").map { it.trim() },
@@ -27,7 +26,6 @@ fun Card.toEntity() = CardEntity(
     this.question,
     this.answer,
     this.code,
-    this.isCodeEnabled,
     this.count,
 
     options = this.options.joinToString(","),
