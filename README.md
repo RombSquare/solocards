@@ -13,7 +13,7 @@ Quiz is just a list of flashcards. There are the ways to manage quizzes:
 * Import/Export quiz as JSON file
 * Share quiz
 
-### 2. Fast edtior
+### 2. Fast editor
 * Create cards in seconds
 * Smooth flip and transition animations
 * Modify quiz attributes (such as "Show answer when incorrect" or "Shuffle cards")
